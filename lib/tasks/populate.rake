@@ -1,3 +1,4 @@
+## Now using fixtures instead of rake tasks
 namespace :db do
   desc "Fill in default user account"
   task populate: :environment do

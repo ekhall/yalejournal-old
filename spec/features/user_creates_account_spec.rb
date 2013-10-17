@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 feature 'Sign in as user' do
+  fixtures :users
   scenario 'with email and password' do
     visit root_path
     click_link 'Login'
