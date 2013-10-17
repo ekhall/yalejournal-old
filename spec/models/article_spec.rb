@@ -19,5 +19,5 @@ describe Article do
   it { should validate_presence_of :journal }
   
   it { should have_many :suggests }
-  it { should have_one(:user).through(:suggests) }
+  it { should have_many(:users).through(:suggests) }
 end

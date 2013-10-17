@@ -14,7 +14,7 @@
 
 class Article < ActiveRecord::Base
   has_many  :suggests
-  has_one   :user, through: :suggests
+  has_many  :users, through: :suggests
   validates :name, presence: true
   validates :journal, presence: true
 end
