@@ -15,10 +15,14 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  username               :string(255)
+#  usertype               :string(255)
 #
 
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_uniqueness_of :email }
+  it { should validate_uniqueness_of :username }
+
 end

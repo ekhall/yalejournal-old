@@ -12,9 +12,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'bootstrap-sass-rails'
+gem 'annotate'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'rspec-expectations'
+  gem 'shoulda-matchers'
   gem 'capybara'
   gem 'spring'
   gem 'guard-spring'
