@@ -12,5 +12,6 @@
 require 'spec_helper'
 
 describe Suggest do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to :article }
+  it { should belong_to :user }
 end

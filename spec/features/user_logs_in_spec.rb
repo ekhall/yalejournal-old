@@ -9,6 +9,7 @@ feature 'Sign in as user' do
     fill_in 'Password', with: 'mypassword'
     click_button 'Sign in'
     expect(page).to have_css '.alert', text: 'Signed in successfully.'
+    expect(page).to have_css 'title', text: 'Current Articles'
   end
 
   scenario 'with invalid email and password' do

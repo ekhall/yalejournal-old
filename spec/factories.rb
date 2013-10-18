@@ -1,10 +1,8 @@
 FactoryGirl.define do
-
-  factory :article do
-    sequence(:journal)    { |n| "Freaking great journal #{n}" }
-    sequence(:name)       { |n| "Interesting article number #{n}" }
-    trait :presented_past do
-      presentation_date   { 3.days.ago }
-    end
+  factory :user do
+    username  { "MyUser" }
+    email     { "myemail@email.com" }
+    password { "mypassword" }
+    encrypted_password { User.new.send(:password_digest, 'mypassword') }
   end
-
+end

@@ -21,6 +21,7 @@ group :test, :development do
   gem 'capybara'
   gem 'spring'
   gem 'guard-spring'
+  gem 'factory_girl_rails', :require => false
 end
 
 
