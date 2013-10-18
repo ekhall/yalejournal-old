@@ -86,14 +86,14 @@ describe ArticlesController do
       it "assigns a newly created but unsaved article as @article" do
         # Trigger the behavior that occurs when invalid params are submitted
         Article.any_instance.stub(:save).and_return(false)
-        post :create, {:article => {  }}, valid_session
+        post :create, {:article => valid_attributes  }, valid_session
         assigns(:article).should be_a_new(Article)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Article.any_instance.stub(:save).and_return(false)
-        post :create, {:article => {  }}, valid_session
+        post :create, {:article => valid_attributes }, valid_session
         response.should render_template("new")
       end
     end
@@ -129,7 +129,7 @@ describe ArticlesController do
         article = Article.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Article.any_instance.stub(:save).and_return(false)
-        put :update, {:id => article.to_param, :article => {  }}, valid_session
+        put :update, {:id => article.to_param, :article => valid_attributes }, valid_session
         assigns(:article).should eq(article)
       end
 
@@ -137,7 +137,7 @@ describe ArticlesController do
         article = Article.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Article.any_instance.stub(:save).and_return(false)
-        put :update, {:id => article.to_param, :article => {  }}, valid_session
+        put :update, {:id => article.to_param, :article => valid_attributes }, valid_session
         response.should render_template("edit")
       end
     end

@@ -1,5 +1,18 @@
 <h1>New article</h1>
 
-<%= render 'form' %>
+
+<%= form_for @article do |form| %>
+  <div>
+    <%= form.label :journal %>
+    <%= form.text_field :journal %>
+  </div>
+  <div>
+    <%= form.label :name %>
+    <%= form.email_field :name %>
+  </div>
+  <div>
+    <%= form.submit "Enter new suggested article" %>
+  </div>
+<% end %>
 
 <%= link_to 'Back', articles_path %>
